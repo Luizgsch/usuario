@@ -26,6 +26,7 @@ public class UsuarioService {
         Usuario usuario = usuarioConverter.paraUsuario(usuarioDTO);
         return usuarioConverter.paraUsuarioDTO(usuarioRepository.save(usuario));
     }
+
     public void emailExiste(String email){
         try{
             boolean existe = verificaEmailExistente(email);
